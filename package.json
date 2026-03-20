@@ -3,22 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "npm": "next dev",
     "dev": "next dev",
-    "build": " next build",
-    "start": " next start",
-    "lint": " lint"
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint ."
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.11.2",
     "next": "16.1.7",
-    "react": "19.2.3",
-    "react-dom": "19.2.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "react-redux": "^9.2.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "babel-plugin-react-compiler": "1.0.0",
-    "tailwindcss": "^4"
+    "tailwindcss": "^4",
+    "eslint": "^8.44.0"
   }
 }
