@@ -1,35 +1,18 @@
+'use client';
+
 import Link from 'next/link';
+import styles from '../ui/Header.module.css';  // ← Relative path!
 
 export default function Header() {
   return (
-    <header style={styles.header}>
-      <h1>Min Webshop</h1>
-      <nav style={styles.nav}>
-        <Link href="/" style={styles.link}>Home</Link>
-        <Link href="/pages/shop" style={styles.link}>Shop</Link>
-        <Link href="/pages/cart" style={styles.link}>Kurv</Link>
-            <Link href="/pages/checkout" style={styles.link}>Chckout</Link>
+    <header className={styles.header}>
+      <h1 className={styles.title}>Min Webshop</h1>
+      <nav className={styles.nav}>
+        <Link href="/" className={styles.link}>Home</Link>
+        <Link href="/pages/shop" className={styles.link}>Shop</Link>
+        <Link href="/pages/cart" className={styles.link}>Kurv</Link>
+        <Link href="/pages/checkout" className={styles.link}>Checkout</Link>
       </nav>
     </header>
   );
 }
-
-const styles = {
-  header: {
-    backgroundColor: '#333',
-    color: 'white',
-    padding: '20px',
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  nav: {
-    display: 'flex',
-    gap: '20px',
-  },
-  link: {
-    color: 'white',
-    textDecoration: 'none',
-    fontWeight: 'bold',
-  },
-};
