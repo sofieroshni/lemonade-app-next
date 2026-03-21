@@ -6,7 +6,7 @@ export default function Checkout() {
   const boughtItems = useSelector(state => state.cart.boughtItems)
 
   return (
-    <div>
+    <div className='bg-red-500 p-4 text-white'>
       <h1>Checkout - Dine Køb</h1>
 
       {boughtItems.length === 0 ? (

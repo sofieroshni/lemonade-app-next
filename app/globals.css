@@ -8,4 +8,12 @@
   html {
     font-family: 'Playfair Display', serif;
   }
+  body{
+    background-color: #6E7A6C;
+    padding: 0;
+    margin: 0;
+  }
+  h1{
+    color:white;
+  }
 }

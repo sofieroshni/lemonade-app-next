@@ -1,18 +1,20 @@
 
 
 .header{
-    background-color: red;
-    display: flex;
+background-color: #333333;    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0;
     padding: 0;
 }
+.h1{
+    color:white;
+}
 .nav{
     list-style-type: none;
     text-decoration: none;
-    color: yellow;
+    color: rgb(0, 0, 0);
 }
 .link{
     text-decoration: none;
