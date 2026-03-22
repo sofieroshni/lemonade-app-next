@@ -2,7 +2,7 @@
 import styles from '../ui/Footer.module.css' 
 import { useDispatch, useSelector } from "react-redux"
 import { buyLemon, sellLemonade } from "../redux/LemonadeSlice"
-
+import CartList from "../components/CartList"  
 export default function Footer(){
   const dispatch = useDispatch()
   const cash = useSelector(state => state.lemonade.cash)
@@ -10,21 +10,30 @@ export default function Footer(){
 
   return(
     <footer className={styles.footer}>
-      <div className={styles.div}>
-        <p>Din kurv</p>
+      <div className={styles.divwrapper}>
       </div>
 
-      <div> 
-        <button onClick={() => dispatch(buyLemon())}>
+      <div className={styles.buttons}> 
+        <button  onClick={() => dispatch(buyLemon())}>
          Køb citron
         </button>          
         <button onClick={() => dispatch(sellLemonade())}>
        Sælg Citron
         </button>
       </div>
+      <div>
 
-      <p>Cash: {cash}</p>
-      <p>Profit: {profit}</p>
+      </div>
+      <CartList></CartList>
+      <div>
+        
+      </div>
+<div>
+
+          <p className={styles.p}>Cash: {cash}</p>
+      <p className={styles.p}>Profit: {profit}</p>
+</div>
+
     </footer>
   )
 }

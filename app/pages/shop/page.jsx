@@ -1,5 +1,5 @@
 'use client'
-
+import styles from '../../ui/Shop.module.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { setLoading, setCocktails, setError } from '../../redux/LemonadeSlice'
 import { useState, useEffect } from 'react'
@@ -39,8 +39,8 @@ export default function Shop() {
   }, [dispatch])
 
   return (
-   < div className='wrapper'>
-    <div className='headershop'>
+   < div className={styles.wrapper}>
+    <div className={styles.headershop}>
       <h1>Shop</h1>
        {/* <Buttons/> */}
       {/* <div>
@@ -54,8 +54,7 @@ export default function Shop() {
 
 </div>
       
-      {/* Cocktails fra mit api */}
-      <h2>Available Cocktails</h2>
+      
       
       {loading && <p>Loading cocktails...</p>} 
       {error && <p>Error: {error}</p>}
@@ -69,8 +68,8 @@ export default function Shop() {
                 src={drink.strDrinkThumb} 
                 alt={drink.strDrink}
               />
-              <h3>{drink.strDrink}</h3>
-              <p>{drink.strCategory}</p>
+              <h3 className={styles.h3} >{drink.strDrink}</h3>
+              <p className={styles.p}>{drink.strCategory}</p>
               <button onClick={() => dispatch(addTooCart(drink))}>
 Tilføj til cart              </button>
             </div>
@@ -78,16 +77,15 @@ Tilføj til cart              </button>
         </div>
       )}
 
-      {/* Vis cartItems */}
       {cartItems.length > 0 && (
-        <div>
-          <h2>Cart Items ({cartItems.length})</h2>
+        <div className={styles.div}>
+          <h2>Din Kurv ({cartItems.length})</h2>
           {cartItems.map((item) => (
             <div key={item.idDrink}>
-              <h4>{item.strDrink}</h4>
-              <p>Quantity: {item.quantity}</p>
-              <button onClick={() => dispatch(removeItem(item.idDrink))}>
-                Remove
+              <h4 className={styles.className}>{item.strDrink}</h4>
+              <p>Antal: {item.quantity}</p>
+              <button className={styles.button} onClick={() => dispatch(removeItem(item.idDrink))}>
+                Fjen
               </button>       
             </div>
           ))}

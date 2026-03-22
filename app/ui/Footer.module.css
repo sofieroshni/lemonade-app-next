@@ -1,23 +1,47 @@
 .footer{
     height: 100px;
-    background-color: blue;
+    background-color: rgba(255, 255, 255, 0.663);
+    
     display: flex;
     position: fixed;
+    justify-content: center;
+    gap:8px;
     z-index:2;
     bottom: 0;
-    width: 100vw;
     padding-top: 16px;
     padding-bottom: 16;
+    align-items: center;
+    /* padding-left: 25px;
+    padding-right: 25px; */
+    width: 100%;
     
 
 }
 .footer>button{
-width:30px;
 }
-.div{
+.buttons{
     background-color: yellow;
-    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90%;
+}
+.divwrapper{
+    background-color: yellow;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: brown;
 }
 .button{
-    background-color: red;
+    /* background-color: red; */
+    width: 50%;
 }
+.p{
+    font-size:12px;
+}
+/* @media (min-width:700px) {
+    .p{
+    
+}} */
